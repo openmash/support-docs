@@ -112,8 +112,10 @@ Create the default tomcat configuration at /etc/default/tomcat7:
     # response time). If you use that option and you run Tomcat on a machine with
     # exactly one CPU chip that contains one or two cores, you should also add
     # the "-XX:+CMSIncrementalMode" option.
-    JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC"
+
+    JAVA_OPTS="-Djava.awt.headless=true -XX:+UseConcMarkSweepGC"
     JAVA_OPTS="${JAVA_OPTS} -Xmx2048m -XX:MaxPermSize=512m"
+
     
     # To enable remote debugging uncomment the following line.
     # You will then be able to use a java debugger on port 8000.
