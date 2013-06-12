@@ -22,6 +22,31 @@ Syncope Google Saturn Demo
     Query OK, 0 rows affected (0.00 sec)
     mysql> FLUSH PRIVILEGES;
 
+### Install mysql connector for java ###
+
+Install from central repository
+
+    # yum install mysql-connector-java
+
+Copy mysql connector *.jar file to tomcat
+
+    # cp /usr/share/java/mysql-connector-java-5.1.17.jar /opt/tomcat/lib/
+    # service tomcat7 restart
+
+### Syncope Prerequisites ###
+
+    # cd /opt
+    # mkdir -p syncope/{logs,bundles}
+    # ln -s /opt/syncope/log /var/lib/syncope
+    
+### GoogleApps ConnId ###
+
+    # cd /opt
+    # git clone https://github.com/openmash/ConnIdGoogleAppsBundle.git
+    # cd ConnIdGoogleAppsBundle.git
+    # mvn clean package -Dbundles.directory=/opt/syncope/bundles -Dlog.directory=/opt/syncope/log
+    # cp /opt/ConnIdGoogleAppsBundle/target/org.connid.bundles.googleapps-1.3.4-SNAPSHOT.jar /opt/syncope/bundles/
+
 ## Deploy demo ##
 
 Generate `*.war` files
