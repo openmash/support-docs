@@ -70,6 +70,31 @@ From development machine
 
     $ scp ./core/target/syncope.war ./console/target/syncope-console.war root@<your-domain>:/opt/tomcat/webapps
     $ scp ./saturn/target/saturn.war root@<your-domain>:/opt/tomcat/webapps/ROOT
+    
+## Configure demo ##
+
+### Add Connector ###
+
+> Resources -> Connectors -> New
+
+| General      |             |
+| ------------:|------------:|
+| Display name | google-apps |
+| Bundle Name  | org.connid.bundles.googleapps 1.3.3                   |
+| Name         | org.identityconnectors.googleapps.GoogleAppsConnector |
+| Version      | 1.3.3       |
+
+| Configuration |             |
+| -------------:|------------:|
+| connectionUrl | https://apps-apis.google.com/a/feeds/test3.sheepdoginc.ca/ |
+| domain | test3.sheepdoginc.ca |
+| login || admin |
+| password | ********* |
+
+| Configuration | |
+| -------------:|-:|
+| check all  | |
+
 
 # How this project was created #
 
