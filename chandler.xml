@@ -41,15 +41,12 @@
 		        driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
 		        url="jdbc:derby:db;create=true" />
 -->
-	<!-- MySQL
-  
   <Resource name="jdbc/cosmo" type="javax.sql.DataSource" maxActive="100"
             maxIdle="30" maxWait="10000" username="root"
             password="" defaultAutoCommit="false"
             driverClassName="com.mysql.jdbc.Driver"
             url="jdbc:mysql://127.0.0.1:3306/cosmo?useUnicode=true&amp;characterEncoding=UTF-8" />
--->
-
+            
 	<!-- PostgreSQL 
   <Resource name="jdbc/cosmo" type="javax.sql.DataSource" maxActive="100"
             maxIdle="30" maxWait="10000" username="cosmo"
